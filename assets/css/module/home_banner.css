@@ -1,0 +1,134 @@
+.banner{
+    width: 100%;
+    background: linear-gradient(180deg, rgba(79, 134, 142, 0.2) 0%, rgba(79, 134, 142, 0) 100%);   
+}
+.banner_items{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 48px 0;
+}
+.start_work{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+.banner_items .start_work h2{
+    font-family: Montserrat;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 35px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #4F868E;
+  }
+  .banner_items .start_work p{
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #4F868E;
+  }
+  .banner_items .start_work button{
+    width: 142px;
+    height: 48px;
+    border: 2px solid #4F868E;
+    color: #4F868E;
+    border-radius: 8px;
+    outline: none;
+    padding: 0px 24px 0px 24px;
+    background-color: transparent;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    text-align: center;
+  }
+  /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .banner_items .start_work h2{
+        font-family: Roboto;
+        font-size: 40px;
+        font-weight: 600;
+        line-height:40px;
+      }
+      .banner_items .start_work p{
+        font-size: 18px;
+      }
+      .banner_items .start_work button{
+        width: 140px;
+        height: 50px;
+        font-family: Roboto;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: 0.5px;
+      }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .banner_items .start_work h2{
+        font-family: Roboto;
+        font-size: 56px;
+        font-weight: 600;
+        line-height:60px;
+      }
+      .start_work p{
+        font-size: 18px;
+      }
+      .banner_items .start_work button{
+        width: 160px;
+        height: 58px;
+        font-family: Roboto;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: 0.5px;
+      }
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .banner_items .start_work h2{
+        font-family: Roboto;
+        font-size: 72px;
+        font-weight: 800;
+        line-height: 79px;
+        text-align: center;
+      }
+      .banner_items .start_work p{
+        font-family: Roboto;
+        font-size: 20px;
+        line-height: 36px;
+        letter-spacing: 0em;
+        text-align: center;
+      }
+      .banner_items .start_work button{
+        width: 208px;
+        height: 64px;
+        font-family: Roboto;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 24px;
+        letter-spacing: 0.5px;
+      }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  
+}
+@media only screen and (min-width: 1400px) {
+
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!--swiper Carousel -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/module/navbar.css">
+    <link rel="stylesheet" href="assets/css/module/home_banner.css">
+    <link rel="stylesheet" href="assets/css/module/carousel.css">
+
+    <title>home</title>
+</head>
+<body>
+    <main class="wrapper">
+        <!-- Navbar -->
+        <header class="header">
+            <div class="container">
+            <div class="header-main">
+                <div class="logo">
+                    <a href="#"><img src="assets/img/Layer 1.png" alt="logo img"></a>
+                </div>
+                <div class="small_device_right_side">
+                    <button type="button" class="appointment_btn_sm">Book Appointment</button>
+                    <button type="button" class="appointment_btn_md">Book An Appointment</button>
+                    <button type="button" class="translator_md">EN</button>
+                    <button type="button" class="translator_sm">EN</button>
+                    
+                    <div class="open-nav-menu">
+                        <span></span>
+                    </div>
+                    <div class="menu-overlay">
+                    </div>
+                    <!-- navigation menu start -->
+                    <nav class="nav-menu">
+                    <div class="close-nav-menu">
+                        <p><i class="fa-solid fa-xmark"></i></p>
+                    </div>
+                    <ul class="menu">
+                        <li class="menu-item">
+                            <a href="#" class="active">Home</a>
+                        </li>
+                        <li class="menu-item menu-item-has-children">
+                            <a href="#" data-toggle="sub-menu">Therapy <i class="plus"></i></a>
+                            <ul class="sub-menu">
+                                <li class="menu-item"><a href="#">Home 1</a></li>
+                                <li class="menu-item"><a href="#">Home 2</a></li>
+                                <li class="menu-item"><a href="#">Home 3</a></li>
+                                <li class="menu-item"><a href="#">Home 4</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item menu-item-has-children">
+                            <a href="#" data-toggle="sub-menu">Psychological coaching <i class="plus"></i></a>
+                            <ul class="sub-menu">
+                                <li class="menu-item"><a href="#">Home 1</a></li>
+                                <li class="menu-item"><a href="#">Home 2</a></li>
+                                <li class="menu-item"><a href="#">Home 3</a></li>
+                                <li class="menu-item"><a href="#">Home 4</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">About</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">Blog</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                    </nav>
+                    <!-- navigation menu end -->
+                </div>
+
+                <div class="appointment">
+                <button type="button" class="translator">EN</button>
+                <button type="button" class="appointment_btn">Book An Appointment</p>
+                </div>
+            </div>
+            </div>
+        </header>
+        <!-- Navbar Complete -->
+        <!-- Banner -->
+        <div class="banner">
+            <div class="container">
+                <div class="banner_items">
+                    <div class="start_work">
+                        <h2>It’s time to take a break</h2>
+                        <p>Build your meditation skills with an app that gives you all you need!</p>
+                        <button type="button">Start Now</button>
+                    </div>
+                    <!-- Slider -->
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="assets/img/Picture4.png" alt="banner img 1">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/img/Picture5.png" alt="banner img 1">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/img/Picture6.png" alt="banner img 1">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="assets/img/Picture4.png" alt="banner img 1">
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <!-- Banner Complete -->
+    </main>
+    <script src="assets/js/main.js"></script>		
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        });
+    </script>
+</body>
+</html>
