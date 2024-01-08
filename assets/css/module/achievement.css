@@ -2,12 +2,13 @@
 .achievement{ 
     text-align: center;
     /* overflow: hidden; */
+    padding-bottom: 48px;
   }
   .title_big{
     display: none;
   }
   .achievement .title{
-    margin-top: 43px;
+    padding-top: 43px;
     font-family: Roboto;
     font-size: 32px;
     font-weight: 700;        

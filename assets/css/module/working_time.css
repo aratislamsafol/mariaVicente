@@ -1,0 +1,149 @@
+/* working Time */
+.working_time{
+    background: linear-gradient(0deg, rgba(79, 134, 142, 0.3) 0%, rgba(79, 134, 142, 0) 100%);
+}
+.working_item{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 32px;
+    padding: 48px 0;
+}
+.working_time_content{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    gap: 24px
+}
+.working_time_title{
+    color: #0F172A;
+    font-family: Montserrat;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: 0em;
+    text-align: left;
+
+}
+.working_time_title_big{
+    display: none;
+}
+.working_time_para{
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+.working_time_content .load_btn, .learn_btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    width: 154px;
+    height: 48px;
+    border: 2px solid var(--common_color);
+    color: var(--common_color);
+    border-radius: 8px;
+    background: transparent;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    text-align: left;
+}
+.load_btn_arrow{
+    padding: 5px;
+} 
+.working_time_img{
+    min-width: 250px;
+    min-height: 240px;
+    max-width: 600px;
+    /* object-fit: cover; */
+    position: relative;
+}
+.working_time_img .group_img{
+    height: 100%;
+    width: 100%;
+}
+.star_icon_img{
+    position: absolute;
+    left: -10px;
+    top: 10px;
+    height: 176px;
+    width: 176px;
+    z-index: -999;
+}
+
+   
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  /* working Time */
+  .working_item{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;  
+    align-items: center;
+    gap: 80px;
+    margin: 80px 0;
+ }
+ .working_time_img{
+  grid-column: 1/2;
+  grid-row: 1/1;
+ }
+ .working_time_content{
+  grid-column: 2/-1;
+  grid-row: 1/1;
+ }
+ .working_time_title_big{
+    font-family: Montserrat;
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 53px;
+    letter-spacing: 0em;
+    text-align: left;
+    color:  #0F172A;
+  }
+  .working_time_para{
+    font-size: 18px;
+    line-height: 29px;
+    color: #475569;
+   }
+
+   .working_time_content .load_btn{
+    width: 179px;
+    height: 56px;
+    font-size: 20px;
+   }
+  .working_time_title{
+    display: none;
+  }
+  .working_time_title_big{
+    display: block;
+  }
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  
+}
+@media only screen and (min-width: 1400px) {
+
+}

@@ -1,4 +1,6 @@
-
+:root {
+    --common_color:#4F868E;
+  }
 *{
 	margin:0;
 	box-sizing: border-box;
@@ -8,7 +10,6 @@
     margin: auto;
 }
 .container{
-	max-width: 1280px;
 	margin:auto;
     padding: 0 16px;
 }
