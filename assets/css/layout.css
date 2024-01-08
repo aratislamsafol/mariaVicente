@@ -1,5 +1,31 @@
 :root {
     --common_color:#4F868E;
+    --title_font_sm: 32px;
+    --title_line_height_sm: 35.2px;
+    --title_font_weight: 700;
+    --para_font_size_sm: 16px;
+    --para_line_height_sm: 22.4px;
+    --para_font_weight_sm: 400; 
+    --btn_font_size_sm: 16px;
+
+    /* Medium Device */
+    --title_font_md: 42px;
+    --title_line_height_md: 40.5px;
+    --title_font_weight_md: 700;
+    --para_font_size_md: 17px;
+    --para_line_height_md: 24.6px;
+    --para_font_weight_md: 400;
+    --btn_font_size_md: 18px;
+
+    /* Big Device */
+    --title_font_xl: 48px;
+    --title_font_weight_xl: 800;
+    --title_line_height_xl: 52.8px;
+    --para_font_size_xl: 18px;
+    --para_line_height_xl: 28.8px;
+    --para_font_weight_xl: 400;
+    --btn_font_size_xl: 20px;
+
   }
 *{
 	margin:0;

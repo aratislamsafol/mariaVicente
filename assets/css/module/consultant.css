@@ -1,0 +1,156 @@
+ /* consultant */
+ .consultant{
+    background: #4F868E;
+  }
+  .consultant_bio{
+     padding: 48px 0;
+     display: flex;
+     flex-direction: column;
+     gap: 32px;
+     color: #FFFFFF;
+  }
+  .consultant_info{
+     display: flex;
+     flex-direction: column;
+     gap:32px;
+  }
+  .consultant_name_degree{
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+     font-family: Montserrat;
+  }
+  .consultant_name_degree h3{
+     font-size: 40px;
+     font-weight: 800; 
+     line-height: 44px;
+     letter-spacing: 0em;
+  }
+  .consultant_name_degree p{
+     font-size: 18px;
+     font-weight: 600;
+     line-height: 28.8px;
+  }
+  .consultant_details p{
+     color:#FFFFFF;
+     font-family: Montserrat;
+     font-size: var(--para_font_size_sm);
+     font-weight: var(--para_font_weight_sm);
+     line-height: 25.6px;
+  }
+  .learn_btn{
+     gap: 14px;
+     width: 140px;
+     height: 40px;
+     border: 2px solid #FFFFFF;
+     color: #FFFFFF;
+     border-radius: 8px;
+     background: transparent;
+     font-family: Roboto;
+     font-size: 14px;
+     font-weight: 500;
+     line-height: 24px;
+     letter-spacing: 0.5px;
+  }
+  .load_btn_arrow {
+      margin-top: 1px;
+   }
+  .consultant_img{
+     min-width: 220px;
+     min-height: 440px;
+     object-fit: cover;
+  }
+  .consultant_img img{
+     height: 100%;
+     width: 100%;
+  }
+ 
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  /* consultant  */
+  .consultant_bio{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+  }
+  .consultant_info{
+    max-width: 576px;
+    flex-basis: 82%;
+  }
+  .consultant_name_degree h3{
+      font-size: var(--title_font_md);
+      line-height: var(--title_line_height_md);
+   }
+   .consultant_name_degree p{
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 23.7px;
+   }
+   .consultant_details p{
+      font-family: Roboto;
+      font-size: var(--para_font_size_md);
+      line-height: var(--para_line_height_md);
+   }
+   .learn_btn{
+      gap: 16px;
+      width: 155px;
+      height: 45px;
+      font-family: Montserrat;
+      font-size: var(--btn_font_size_md);
+      font-weight: 400;
+   }
+  .consultant_img{
+    max-width: 623px;
+    max-height: 760px;
+    border-radius: 80px, 0px, 80px, 0px;
+  }     
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+   .consultant_name_degree h3{
+      font-size: 48px;
+      line-height: 52.8px;
+   }
+   .consultant_name_degree p{
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 38.4px;
+  }
+  .consultant_details p{
+    font-size: 18px;
+    font-family: Roboto;
+    line-height: 28.8px;
+  }
+  .learn_btn{
+   gap: 16px;
+   width: 209px;
+   height: 56px;
+   font-size: var(--btn_font_size_xl);
+   font-family: Montserrat;
+   font-weight: 600;
+   }
+   .load_btn_arrow{
+      margin-top: 5px;
+   }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  
+}
+@media only screen and (min-width: 1400px) {
+
+}

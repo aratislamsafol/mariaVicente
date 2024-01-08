@@ -6,7 +6,7 @@
     display: flex;
     flex-direction: column;
     gap: 32px;
-    padding: 48px 0;
+    padding: 48px 0 35px 0;
 }
 .start_work{
     display: flex;
@@ -16,18 +16,18 @@
 }
 .banner_items .start_work h2{
     font-family: Montserrat;
-    font-size: 32px;
-    font-weight: 700;
-    line-height: 35px;
+    font-size: var(--title_font_sm);
+    font-weight: var(--title_font_weight);
+    line-height: var(--title_line_height_sm);
     letter-spacing: 0em;
     text-align: center;
     color: #4F868E;
   }
   .banner_items .start_work p{
     font-family: Montserrat;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 22px;
+    font-size: var(--para_font_size_sm);
+    font-weight: var(--para_font_weight_sm);
+    line-height: var(--para_line_height_sm);
     letter-spacing: 0em;
     text-align: center;
     color: #4F868E;
@@ -42,7 +42,7 @@
     padding: 0px 24px 0px 24px;
     background-color: transparent;
     font-family: Montserrat;
-    font-size: 16px;
+    font-size: var(--btn_font_size_sm);
     font-weight: 500;
     line-height: 24px;
     letter-spacing: 0.5px;
@@ -58,7 +58,7 @@
     .banner_items .start_work h2{
         font-family: Roboto;
         font-size: 40px;
-        font-weight: 600;
+        font-weight: 700;
         line-height:40px;
       }
       .banner_items .start_work p{
@@ -77,57 +77,65 @@
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+    .banner_items {
+      gap: 40px;
+      padding: 40px 0 0 0;
+    }
     .banner_items .start_work h2{
-        font-family: Roboto;
-        font-size: 56px;
-        font-weight: 600;
-        line-height:60px;
+        font-size: var(--title_font_md);
+        font-weight: var(--title_font_weight_md);
+        line-height:var(--title_line_height_md);
       }
       .start_work p{
-        font-size: 18px;
+        font-size: var(--para_font_size_md);
+        line-height: var(--para_line_height_md);
+        font-weight: var(--para_font_weight_md);
       }
       .banner_items .start_work button{
-        width: 160px;
-        height: 58px;
-        font-family: Roboto;
-        font-size: 20px;
-        font-weight: 700;
-        line-height: 24px;
-        letter-spacing: 0.5px;
+        width: 145px;
+        height: 55px;
+        font-size: var(--btn_font_size_md);
       }
 }
 
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    .banner_items .start_work h2{
+      .banner_items .start_work h2{
         font-family: Roboto;
-        font-size: 72px;
-        font-weight: 800;
-        line-height: 79px;
-        text-align: center;
+        font-size: var(--title_font_xl);
+        font-weight: var(--title_font_weight_xl);
+        line-height: var(--title_line_height_xl);
       }
       .banner_items .start_work p{
         font-family: Roboto;
-        font-size: 20px;
-        line-height: 36px;
-        letter-spacing: 0em;
-        text-align: center;
+        font-size: var(--para_font_size_xl);
+        line-height: var(--para_line_height_xl);
       }
       .banner_items .start_work button{
-        width: 208px;
-        height: 64px;
+        width: 178px;
+        height: 58px;
         font-family: Roboto;
-        font-size: 24px;
-        font-weight: 700;
-        line-height: 24px;
-        letter-spacing: 0.5px;
+        font-size: var(--btn_font_size_xl);
       }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-  
+  .banner_items .start_work h2{
+    font-size: 72px;
+    font-weight: 800;
+    line-height: 79px;
+  }
+  .banner_items .start_work button{
+    width: 208px;
+    height: 64px;
+    font-size: 24px;
+  }
+  .banner_items .start_work p{
+    font-size: 20px;
+    line-height: 36px;
+  }
 }
 @media only screen and (min-width: 1400px) {
 
