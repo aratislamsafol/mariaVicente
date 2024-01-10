@@ -20,6 +20,7 @@ function card() {
         </div>`;
     }).join('');
     loadBtn.textContent = viewAll ? 'Show Less Items' : 'View All';
+    moreBtn.textContent = viewAll ? 'Show Less Articles' : 'More Articles';
 }
 
 function toggleInfo(button) {
@@ -32,7 +33,7 @@ function showAllItems() {
     viewAll = !viewAll;
     cardsToShow = viewAll ? articleData.length : 3;
     card();
-    moreBtn.textContent = viewAll ? 'Show Less Articles' : 'More Articles';
+    
 }
 
 loadBtn.addEventListener('click', showAllItems);
