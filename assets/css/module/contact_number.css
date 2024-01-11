@@ -1,0 +1,135 @@
+.select-box {
+    position: relative;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.select-box input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+input[type="tel"] {
+    border-radius: 0 .3rem .3rem 0;
+}
+
+.select-box input:focus {
+    border: none;
+}
+
+.selected-option {
+    background-color: #eee;
+    border-radius: .3rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgb(116, 114, 114);
+}
+
+.selected-option div{
+    position: relative;
+    width: 7rem;
+    padding: 0 0.1rem 0 0rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.selected-option div::after{
+    position: absolute;
+    content: "";
+    right: 4px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    width: 0.3rem;
+    height: 0.3rem;
+    border-right: 0.12rem solid #111;
+    border-bottom: 0.12rem solid #111;
+    transition: .2s;
+}
+
+.selected-option div.active::after{
+    transform: translateY(-50%) rotate(225deg);
+}
+
+.select-box .options {
+    position: absolute;
+    top: 74px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: .5rem;
+    display: none;
+    border: 1px solid rgb(116, 114, 114);
+    z-index: 11;
+}
+
+.select-box .options.active {
+    display: block;
+}
+
+.select-box .options::before {
+    position: absolute;
+    content: "";
+    left: 1rem;
+    top: -1.2rem;
+    width: 0;
+    height: 0;
+    border: .6rem solid transparent;
+    border-bottom-color: #b1b0b0;
+}
+
+input.search-box {
+    background-color:#f5f2f2;
+    color: #575656;
+    border-radius: .3rem .3rem 0 0;
+}
+
+.select-box ol {
+    list-style: none;
+    max-height: 23rem;
+    overflow: overlay;
+    padding: 0;
+}
+
+.select-box ol::-webkit-scrollbar {
+    width: 0.6rem;
+}
+
+.select-box ol::-webkit-scrollbar-thumb {
+    width: 0.4rem;
+    height: 3rem;
+    background-color: #ccc;
+    border-radius: .4rem;
+}
+
+.select-box ol li {
+    padding: 0.6rem;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.select-box ol li.hide {
+    display: none;
+}
+
+.select-box ol li:not(:last-child) {
+    border-bottom: .1rem solid #eee;
+}
+
+.select-box ol li:hover {
+    background-color: lightcyan;
+}
+
+.select-box ol li .country-name {
+    margin-left: .4rem;
+}
+strong{
+    font-size: 16px;
+    margin-left: 4px;
+}
+

@@ -1,0 +1,348 @@
+.appointment-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding-top: 120px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 75%;
+    max-height: 90%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: animationTopSlide;
+    animation-duration: 0.4s;
+    overflow-y: auto; 
+    border-radius: 8px;
+}
+
+@keyframes animationTopSlide {
+    from {
+        top: -500px;
+        opacity: 0;
+    }
+
+    to {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+/* The Close Button */
+.close {
+    color: #000;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: -3px;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modal-header, .modal-body, .modal-footer{
+    padding: 2px 16px;
+}
+.modal-header {
+    border-bottom:1px solid rgb(218, 218, 218);
+    color: #393a3d;
+    position: sticky;
+    top: 0;
+    padding: 20px 16px;
+    background-color: white;
+    z-index: 999;
+}
+.modal-header h2{
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 29px;
+}
+.modal-content::-webkit-scrollbar, .comment::-webkit-scrollbar {
+    width: 0;
+}
+.modal-body .name, .contact-data{
+    display: flex;
+    gap: 20px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    padding: 32px 0;
+    gap: 28px;
+}
+.modal-body .name>div, .email {
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
+.first-name, .last-name, .contact-data .select-box, .email{
+    flex-basis: 50%;
+}
+.first-name input, .last-name input, .email input{
+    padding: 10px;
+    width: 100%;
+    color: rgb(116, 114, 114);
+    border: .1rem solid rgb(116, 114, 114);
+    border-radius: .3rem;
+}
+
+.selected-option input{
+    width: 100%;
+}
+/* Appointment Date Calendar System*/
+.appointment-date{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.appointment_body{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+}
+.calender{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(116, 114, 114);
+    border-radius: 4px;
+    width: 100%;
+}
+.calendar_header{
+    display: flex;
+    flex-direction: column;
+}
+.selected_date{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 6px;
+    font-size: 18px;
+}
+.selected_date h5{
+    font-size: 16px;
+    font-weight: 400;
+}
+.month_date_segment{
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid rgb(116, 114, 114);
+    border-bottom: 1px solid rgb(116, 114, 114);
+    position: relative;
+}
+.month_date_segment .form-select{
+    border: none;
+    font-size: 15px;
+    padding: 6px;
+    text-align: left;
+}
+.middle_border{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1px;
+    height: 30px;
+    background: rgb(116, 114, 114);
+}
+.month_date_segment .form-select {
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+    appearance: none; 
+    border: none;
+    outline: none;
+    width: 100%;
+}
+.month_date_segment .form-select option{
+    width: 100%;
+}
+.month_date_segment .form-select::-ms-expand {
+    display: none; 
+}
+.calender_body{
+    display: flex;
+    flex-direction: column;
+}
+.days_name{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    background: #dbe8eb;
+    padding: 8px 6px;
+    color: #0c4750;
+    flex-wrap: wrap;
+    text-align: center;
+    font-size: 14px;
+}
+.days_name li{
+    text-transform: uppercase;
+    width: 14.2%;
+}
+.days ul{
+    list-style: none;
+    padding: 6px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.days li{
+    width: 14.2%;
+    text-align: center;
+    padding: 6px;
+}
+.days li:hover{
+    background:#0c4750;
+    color: white;
+    border-radius: 4px;
+    transition: .1s ease-in;
+    cursor: pointer;
+}
+.schedule{
+    width: 100%;
+}
+.schedule p{
+    font-size: 18px;
+}
+.slot{
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    gap: 10px;
+    cursor: pointer;
+}
+.slot p{
+    padding: 10px;
+    border: 1px solid #0c4750;
+    border-radius: 6px;
+}
+.slot p:hover{
+    background-color: #0c4750;
+    color: white;
+    transition: .1s ease-in;
+}
+.selected_schedule{
+    color: #0c4750;
+    margin-top: 30px;
+}
+.selected_schedule span{
+    padding: 4px 6px;
+    background-color: #0c4750;
+    color: white;
+}
+.hide{
+    display: none;
+}
+.show{
+    display: block;
+}
+.visit_fees{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.visit, .fees{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.comment{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: scroll;
+}
+.comment .comment_input{
+    padding: 10px;
+    width: 100%;
+    height: 145px;
+    resize: none;
+    border-radius: 4px;
+    font-size: 16px;
+}
+.submit{
+    width: 88px;
+    height: 40px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: none;
+    background: var(--common_color);
+    color: white;
+    font-weight: 400;
+    margin-top: -16px;
+}
+input:focus, textarea:focus{
+    border: 1px solid var(--common_color);
+    outline: none;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+    .modal-header{
+        padding: 14px 16px;
+    }
+    .modal-header h2 {
+        font-weight: 600;
+        font-size: 19px;
+    }
+    .modal-content{
+        width: 92%;
+        height: 92%;
+    }
+    .modal-body .name, .contact-data, .appointment_body,.visit_fees {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .close {
+        margin-top: -3px;
+    }
+    .form {
+        padding: 16px 0;
+        gap: 16px;
+    }
+    .selected_schedule{
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .selected_schedule span{
+        padding: 1px 3px;
+        font-size: 16px;
+    }
+    .submit{
+        width: 77px;
+        height: 34px;
+        font-size: 14px;
+    }
+    
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) and (max-width: 991px) {
+    .modal-content{
+        width: 90%;
+        max-height: 94%;
+    }
+    .submit{
+        width: 90px;
+        height: 39px;
+        font-size: 16px;
+    }
+    .form {
+        padding: 20px 0;
+        gap: 20px;
+    }
+}

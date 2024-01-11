@@ -65,4 +65,5 @@
   
   })();
   
+  // Validation of form
   
