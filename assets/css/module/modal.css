@@ -10,7 +10,7 @@
     height: 100%;
     overflow: auto;
     background-color: rgba(66, 66, 66, 0.4);
-    display: none;
+    display: block;
 }
 
 .modal-content {
@@ -362,4 +362,7 @@ input:focus, textarea:focus{
         padding: 20px 0;
         gap: 20px;
     }
+}
+.prev_date, .next_date{
+    opacity: 0.5;
 }

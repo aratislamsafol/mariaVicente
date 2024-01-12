@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="assets/css/module/article.css">
     <!-- iconify for Flag -->
     <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+
     <title>home</title>
 </head>
 <body>
@@ -84,12 +85,15 @@
                     </div>
 
                     <div class="appointment">
-                    <button type="button" class="translator">EN</button>
+                        <button type="button" class="translator" id="languageToggle">EN</button>
+
+
                     <button type="button" class="appointment_btn">Book An Appointment</p>
                     </div>
                 </div>
             </div>
         </header>
+        <div id="google_translate_element"></div>
         <!-- Navbar Complete -->
         <!-- Banner -->
         <div class="banner">
@@ -328,77 +332,23 @@
 
                                         <div class="month_date_segment">
                                             <div class="middle_border"></div>
-                                            <select class="form-select" id="year" name="month">
-                                                <option value="january">January</option>
-                                                <option value="february">February</option>
-                                                <option value="march">March</option>
-                                                <option value="april">April</option>
-
-                                                <option value="may">May</option>
-                                                <option value="june">June</option>
-                                                <option value="july">July</option>
-                                                <option value="august">August</option>
-
-                                                <option value="september">September</option>
-                                                <option value="october">October</option>
-                                                <option value="november">November</option>
-                                                <option value="december">December</option>
+                                            <select class="form-select" id="month" name="month">
+                                               <!-- month come from modalAppointment.js file -->
                                             </select>
                                             <select class="form-select" id="year" name="year">
-                                                <option value="2024">2024</option>
-                                                <option value="2025">2025</option>
-                                                <option value="2026">2026</option>
-                                                <option value="2027">2027</option>
+                                                <!-- year come from modalAppointment.js file -->
                                             </select>
-
-
                                         </div>
                                     </div>
 
                                     <div class="calender_body">
                                         <ul class="days_name">
-                                            <li>Sun</li>
-                                            <li>Mon</li>
-                                            <li>Tue</li>
-                                            <li>Wed</li>
-                                            <li>Thu</li>
-                                            <li>Fri</li>
-                                            <li>Sat</li>
+                                            <!-- days name come from modalAppointment.js file -->
                                         </ul>
 
                                         <div class="days">
                                             <ul>
-                                                <li>1</li>
-                                                <li>2</li>
-                                                <li>3</li>
-                                                <li>4</li>
-                                                <li>5</li>
-                                                <li>6</li>
-                                                <li>7</li>
-                                                <li>8</li>
-                                                <li>9</li>
-                                                <li>10</li>
-                                                <li>11</li>
-                                                <li>12</li>
-                                                <li>13</li>
-                                                <li>14</li>
-                                                <li>15</li>
-                                                <li>16</li>
-                                                <li>17</li>
-                                                <li>18</li>
-                                                <li>19</li>
-                                                <li>20</li>
-                                                <li>21</li>
-                                                <li>22</li>
-                                                <li>23</li>
-                                                <li>24</li>
-                                                <li>25</li>
-                                                <li>26</li>
-                                                <li>27</li>
-                                                <li>28</li>
-                                                <li>29</li>
-                                                <li>30</li>
-                                                <li>31</li>
+                                                <!-- Days Come from modalAppointment.js file-->
                                             </ul>
                                         </div>
                                     </div>
