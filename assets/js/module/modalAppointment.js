@@ -31,65 +31,85 @@ window.onclick = function(event) {
 
 // Appointment date Calender
 const selectAppointmentDaysName = document.querySelector('.days_name'); 
-const allCalenderDays = document.querySelector('.days ul');
 const monthDiv = document.querySelector('#month');
-
+const calendarDays = document.querySelector('#days');
+const preNextBtn = document.querySelectorAll('.pre_next span');
+const nextBtn = document.querySelector('#next');
 // Variable initialize
-const date = new Date();
-date.setDate(1);
-const currentDay = new Date(date.getFullYear(), date.getMonth() +1, 0).getDate();
-const firstDayIndex = date.getDay();
-const prevDay = new Date(date.getFullYear(), date.getMonth(), 0).getDate();
-const nextDay = new Date(date.getFullYear(), date.getMonth() +1, 0).getDay();
-const lastDayIndex = 7 - nextDay -1;
-const month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October','November', 'December'];
+const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October','November', 'December'];
 const years = [2024, 2025, 2026, 2027, 2028, 2029, 2030, 2031, 2032];
 const daysName = ['sun', 'Mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
-
-// function for all
-
-function monthName(){
-    monthDiv.innerHTML = `${month.map(month=>{
-        return `<option value="${month}">${month}</option>`
-    })}`
-}
-
-function year(){
-    document.querySelector('#year').innerHTML = `${years.map(year=>{
-        return `<option value="${year}">${year}</option>`
-    })}`
-}
+let date = new Date();
+let year = date.getFullYear();
+let month = date.getMonth();
 
 function appointmentDaysName(){
     selectAppointmentDaysName.innerHTML = `${daysName.map(element=>{
         return `<li>${element}</li>`
     }).join("")}`
 }
-
-function calenderDays() {
-    let calendarHTML = "";
-
-    for (let preMonthDay = firstDayIndex; preMonthDay > 0; preMonthDay--) {
-        let passDay = prevDay - preMonthDay + 1;
-        calendarHTML += `<li class="prev_date">${passDay}</li>`;
-    }
-
-    for (let day = 0; day < currentDay; day++) {
-        calendarHTML += `<li>${day + 1}</li>`;
-    }
-
-    for (let nextMonthDay = 1; nextMonthDay <= lastDayIndex; nextMonthDay++) {
-        calendarHTML += `<li class="next_date">${nextMonthDay}</li>`;
-    }
-
-    allCalenderDays.innerHTML = calendarHTML;
+function monthName(){
+    monthDiv.innerHTML = `${months.map(month=>{
+        return `<option value="${month}">${month}</option>`
+    })}`
+}
+function yearShow(){
+    document.querySelector('#year').innerHTML = `${years.map(element=>{
+        return `<option value="${element}">${element}</option>`
+    })}`
 }
 
-// Initial Call Item
+const manipulate = ()=> {
+    // start to calendar in firstDay of the Month
+    let firstDayMonth = new Date(year, month, 1).getDay();
+    // Last Date of the Month
+    let lastDateMonth = new Date(year, month+1, 0).getDate();
+    // last day of the month
+    let lastDayMonth = new Date(year, month, lastDateMonth).getDay(); 
+    // last date of the previous month
+    let prevMonthLastDate=new Date(year, month, 0).getDate();
+    // my data store
+    let days="";
+
+    // previous Month Day Show
+    for(let prevMonthDay = firstDayMonth; prevMonthDay >0; prevMonthDay-- ){
+        days += `<li class="prev_date">${prevMonthLastDate-prevMonthDay+1}</li>`
+    }
+    // current MonthDay Show
+    for(let day = 1; day <= lastDateMonth; day++){
+        let isToday=day===date.getDate() && month===new Date().getMonth() && year===new Date().getFullYear() ? "active_date": "";
+        days += `<li class="${isToday}">${day}</li>`;
+    }
+
+    // nextMonth Day Show
+    for(let nextMonthDay = lastDayMonth; nextMonthDay <6; nextMonthDay++){
+        days += `<li class="next_date">${nextMonthDay - lastDayMonth+1}</li>`;
+    }
+
+    calendarDays.innerHTML=days;
+}
 monthName();
-year();
 appointmentDaysName();
-calenderDays();
+yearShow();
+manipulate();
+preNextBtn.forEach(icons=>{
+    icons.addEventListener('click',()=>{
+        month=icons.id==="prev" ? month - 1 : month + 1;
+        if(month < 0 || month > 11){
+            date = new Date(year, month, date.getDate());
+            // Set the year to the new year
+            year=date.getFullYear();
+            // Set the month to the new month
+            month=date.getMonth();
+        }else {
+            // Set the date to the current date
+            date=new Date();
+        }
+
+        manipulate();
+    })
+});
+
 
 // Button Fire
 appointmentBtn.addEventListener('click',toggleModal);

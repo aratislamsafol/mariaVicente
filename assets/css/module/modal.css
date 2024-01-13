@@ -230,6 +230,10 @@
 .schedule{
     width: 100%;
 }
+.schedule .calender_time_change{
+    display: flex;
+    justify-content: space-between;
+}
 .schedule p{
     font-size: 18px;
 }
@@ -365,4 +369,9 @@ input:focus, textarea:focus{
 }
 .prev_date, .next_date{
     opacity: 0.5;
+}
+.active_date{
+    background-color: #0c4750;
+    color: white;
+    border: 1px solid black;
 }
