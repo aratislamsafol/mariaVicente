@@ -147,10 +147,10 @@ document.querySelector('.slot').addEventListener('click', function(event) {
 
         // Remove the 'active_date' class from all slots
         const allSlots = document.querySelectorAll('.slot-item');
-        allSlots.forEach(slot => slot.classList.remove('active_date'));
+        allSlots.forEach(slot => slot.classList.remove('selected_day'));
 
         // Add the 'active_date' class to the clicked slot
-        event.target.classList.add('active_date');
+        event.target.classList.add('selected_day');
 
         updateSelectedSchedule();
     }
