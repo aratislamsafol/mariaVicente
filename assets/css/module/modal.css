@@ -371,7 +371,20 @@ input:focus, textarea:focus{
     opacity: 0.5;
 }
 .active_date{
-    background-color: #0c4750;
+    border: 1px solid #0c4750;
     color: white;
     border: 1px solid black;
+    border-radius: 4px;
+    background-color: #461e8d;
+}
+
+.selected_day {
+    background-color: rgb(8, 145, 97);
+    color: white;
+    border-radius: 4px;
+}
+.selected_date_showed{
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
 }
