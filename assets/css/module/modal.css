@@ -10,7 +10,7 @@
     height: 100%;
     overflow: auto;
     background-color: rgba(66, 66, 66, 0.4);
-    display: block;
+    display: none;
 }
 
 .modal-content {
@@ -67,7 +67,7 @@
 }
 .close:hover,
 .close:focus {
-    color: red;
+    color: #920505;
     text-decoration: none;
     cursor: pointer;
 }
@@ -304,6 +304,7 @@
     color: white;
     font-weight: 400;
     margin-top: -16px;
+    cursor: pointer;
 }
 input:focus, textarea:focus{
     border: 1px solid var(--common_color);
@@ -388,3 +389,5 @@ input:focus, textarea:focus{
     flex-direction: row;
     gap: 6px;
 }
+
+/* NOTIFICATION TOAST */

@@ -1,0 +1,118 @@
+.appointment_poster_body {
+    position: relative;
+    background-position: center;
+    background-image: url('/assets/img/Picture5.png');
+    width: 100%;
+    height: 556px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 100px 0;
+}
+.appointment_poster_body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #4F868EBF;; 
+    background-size: cover;
+    opacity: 0.5; 
+    border-radius: 100px 0;
+}
+.ap_poster{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    width: 60vw; 
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    transform: translateY(-50%);
+}
+.ap_poster h2{
+    font-family: Montserrat;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 38px;
+    letter-spacing: 0em;
+    color: #FFFFFF;
+}
+.ap_poster p{
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0em;
+    color: #FFFFFF;
+}
+.appointment_btn2{
+    max-width: 259px;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    text-align: left;
+    color: var(--common_color);
+    background-color: white;
+    text-align: center;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {...}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .ap_poster h2{
+        font-size: var(--title_font_md);
+        line-height: var(--title_line_height_md);
+    }
+    .ap_poster p{
+        font-size: 20px;
+        line-height: 32px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .appointment_poster_body {
+        max-height: 476px;
+    }
+    .ap_poster{
+        width: 50%;
+        left: 40%;
+    }
+    .ap_poster h2{
+        font-size: var(--title_font_md);
+        line-height: var(--title_line_height_md);
+    }
+    .ap_poster p{
+        font-size: var(--para_font_size_md);
+        line-height: 32px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .ap_poster{
+        max-width: 520px;
+    }
+    .ap_poster h2{
+        font-size: var(--title_font_xl);
+        line-height: var(--title_line_height_xl);
+        font-weight: var(--title_font_weight_xl);
+    }
+    .ap_poster p{
+        font-size: var(--para_font_size_xl);
+        line-height: 32px;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .ap_poster{
+        left: 47%;
+    }
+}
+

@@ -18,8 +18,12 @@
     <link rel="stylesheet" href="assets/css/module/working_time.css">
     <link rel="stylesheet" href="assets/css/module/consultant.css">
     <link rel="stylesheet" href="assets/css/module/article.css">
+    <link rel="stylesheet" href="assets/css/module/appointmet_poster.css">
+    <link rel="stylesheet" href="assets/css/module/question.css">
+    <link rel="stylesheet" href="assets/css/module/footer.css">
     <!-- iconify for Flag -->
     <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+    <!-- Toast Notify -->
 
     <title>home</title>
 </head>
@@ -86,9 +90,7 @@
 
                     <div class="appointment">
                         <button type="button" class="translator" id="languageToggle">EN</button>
-
-
-                    <button type="button" class="appointment_btn">Book An Appointment</p>
+                        <button type="button" class="appointment_btn">Book An Appointment</button>
                     </div>
                 </div>
             </div>
@@ -273,6 +275,80 @@
             </div>
         </div>
         <!-- Article Complete -->
+        <!-- book an Appointment poster   -->
+        <div class="appointment_poster">
+            <div class="container">
+                <div class="appointment_poster_body">
+                   <div class="ap_poster">
+                    <h2>Problems come and get solved with ease</h2>
+                    <p>Egestas fringilla aliquam leo, habitasse arcu varius lorem elit. Neque pellentesque donec et tellus ac varius tortor, bibendum. Nulla felis ac turpis at amet. Purus malesuada placerat arcu at enim elit in accumsan.</p>
+                    <button type="button" class="appointment_btn appointment_btn2">Book An Appointment</button>
+                   </div>
+                </div>
+            </div>
+        </div>
+        <!-- complete book an Appointment poster  -->
+        <!-- popular Question -->
+        <section class="popular_question">
+            <div class="container">
+                <div class="popular_question_box">
+                    <div class="popular_question_content">
+                        <h3 class="pq_mobile_heading">Answers to your questions</h3>
+                        <h3 class="pq_big_heading">The most popular questions to discuss mental health</h3>
+
+                        <div class="all_question" id="allQuestion">
+                            <!-- Date Get from Question.js File -->
+                        </div>
+                    </div>
+                    <div class="content_img">
+                        <img src="assets/img/Group 51.png" alt="popular content image">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Popular Question Complete -->
+        <!-- Footer -->
+        <section class="footer">
+            <div class="container">
+                <div class="footer_items">
+                    <div class="footer_item">
+                        <div class="logo">
+                            <img src="assets/img/Layer 1.png" alt="logo">
+                        </div>
+    
+                        <div class="footer_menu">
+                            <a href="">Terms</a>
+                            <a href="">Privacy</a>
+                            <a href="">Support</a>
+                            <a href="">About</a>
+                            <a href="">Contact</a>
+                        </div>
+                        <div class="footer_menu_big">
+                            <a href="">Terms</a>
+                            <a href="">Privacy</a>
+                            <a href="">Support</a>
+                            <a href="">About</a>
+                            <a href="">Contact</a>
+                        </div>
+    
+                        <div class="social_icon">
+                            <ul>
+                                <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
+                                <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                                <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                                <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="copyright">
+                        <h6>@ 2023. All rights reserved.</h6>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        <!-- Footer Complete -->
         <!-- modal -->
         <div class="appointment-modal" id="apModal">
             <div class="modal-content">
@@ -281,7 +357,7 @@
                     <h2>Request an Appointment</h2>
                 </div>
                 <div class="modal-body">
-                    <form action="" class="form" method="post">
+                    <form action="#" class="form">
                         <div class="name">
                             <div class="first-name">
                                 <label for="">First Name</label>
@@ -316,7 +392,7 @@
 
                             <div class="email">
                                 <label for="">Email</label>
-                                <input type="email" id="email" name="email" placeholder="Email">
+                                <input type="email" id="email" name="email" placeholder="Email" required>
                             </div>
                         </div>
 
@@ -333,7 +409,7 @@
                                         <div class="month_date_segment">
                                             <div class="middle_border"></div>
                                             <select class="form-select" id="month" name="month">
-                                               <!-- month come from modalAppointment.js file -->
+                                            <!-- month come from modalAppointment.js file -->
                                             </select>
                                             <select class="form-select" id="year" name="year">
                                                 <!-- year come from modalAppointment.js file -->
@@ -364,7 +440,7 @@
                                             <span id="next"><i class="fa-solid fa-angle-right"></i></span>
                                         </div>
                                     </div>
-                                   
+                                
                                     <div class="slot">
                                     
                                     </div>
@@ -378,12 +454,12 @@
                             <div class="visit">
                                 <label for="">First Time Visit?</label>
                                 <div>
-                                    <input type="radio" name="visit_status" id="visited" value="Yes">
+                                    <input type="radio" name="visit_status" id="visited" value="Yes" required>
                                     <label for="visited">Yes</label>
                                 </div>
                                 <div>
                                     <input type="radio" name="visit_status" id="notVisited" value="No">
-                                    <label for="notVisited">No</label>
+                                    <label for="notVisited" required>No</label>
                                 </div>
                             </div>
                             <div class="fees">
@@ -411,6 +487,8 @@
                 </div>
             </div>
         </div>
+        <!-- Modal Complete -->
+
     </main>
 
     <script src="assets/js/main.js"></script>	
@@ -419,6 +497,7 @@
     <script src="assets/js/module/contactNumber.js"></script>
     <script src="assets/data/viewAllData.js"></script>
     <script src="assets/js/module/viewAll.js"></script>
+    <script src="assets/js/module/question.js"></script>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 

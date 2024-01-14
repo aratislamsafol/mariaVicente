@@ -1,0 +1,121 @@
+/* Footer */
+.footer_items{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(2, auto);
+    margin: 24px 0;
+    gap:16px;
+  }
+  .footer_item{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .footer_menu{
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer_menu a, .copyright h6{
+    color: var(--footer_menu_color);
+    text-decoration: none;
+    font-family: var(--footer_item_a_font_family);
+    font-size: var(--footer_item_a_font_size);
+    font-weight: var(--footer_item_a_font_weight);
+    line-height: var(--footer_item_a_line_height);
+    letter-spacing: 0em;
+    text-align: left;
+    Padding:12px 0px 12px 0px;
+  }
+  .social_icon{
+    display: none;
+  }
+  .copyright h6{
+    Padding: 0px;
+  }
+  .footer_menu_big{
+    display: none;
+  }
+
+  
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  /* footer */
+  .social_icon{
+    display: block;
+  }
+
+  .footer_item{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--common_color);
+    height: 126px;
+  }
+  .footer_menu{
+    display: none;
+  }
+  .footer_menu_big{
+    max-width: 578px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  .footer_menu_big a{
+    color: var(--dark_heading_font_color);
+    font-size: var(--footer_item_a_font_size);
+    font-weight: var(--footer_item_a_font_weight);
+    line-height: var(--footer_item_a_line_height);
+    letter-spacing: 0em;
+    text-decoration: none;
+  }
+  .social_icon{
+    margin-top: 10px;
+  }
+  .social_icon ul{
+    list-style-type: none;
+  }
+  .social_icon ul li{
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    margin-left: 16px;
+    text-align: center;
+
+  }
+  .social_icon a{
+    color: var(--dark_heading_font_color);
+  }
+  .social_icon ul li:first-child{
+    margin-left: 0;
+  }
+  .copyright{
+    display: flex;
+    justify-content: center;
+  }
+ 
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  
+}
+@media only screen and (min-width: 1400px) {
+
+}

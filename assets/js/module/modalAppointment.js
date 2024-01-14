@@ -1,4 +1,4 @@
-const appointmentBtn = document.querySelector('.appointment_btn');
+const appointmentBtn = document.querySelectorAll('.appointment_btn');
 const appointmentBtnSm = document.querySelector('.appointment_btn_sm');
 const appointmentBtnMd = document.querySelector('.appointment_btn_md');
 const appointmentModal = document.querySelector('.appointment-modal');
@@ -193,7 +193,11 @@ function showLastSelectedDay() {
 }
 
 // Button Fire
-appointmentBtn.addEventListener('click',toggleModal);
+appointmentBtn.forEach(apBtn=>{
+    apBtn.addEventListener('click',toggleModal);
+});
+
 appointmentBtnSm.addEventListener('click',toggleModal);
 appointmentBtnMd.addEventListener('click',toggleModal);
 closeBtn.addEventListener('click',toggleModal)
+
