@@ -6,7 +6,7 @@
   }
   
   /* Loader Styles start here */
-  .loader-wrapper {
+  .loader_wrapper {
     --line-width: 5px;
     --curtain-color: #f1faee;
     --outer-line-color: #a8dadc;
@@ -67,30 +67,30 @@
   
   @-webkit-keyframes spin {
     0%   { 
-      -webkit-transform: rotate(0deg); 
+        -webkit-transform: rotate(0deg); 
         -ms-transform: rotate(0deg); 
-            transform: rotate(0deg);
+        transform: rotate(0deg);
     }
     100% { 
-      -webkit-transform: rotate(360deg); 
+        -webkit-transform: rotate(360deg); 
         -ms-transform: rotate(360deg); 
-            transform: rotate(360deg);
+        transform: rotate(360deg);
     }
   }
   @keyframes spin {
     0%   { 
-      -webkit-transform: rotate(0deg); 
+        -webkit-transform: rotate(0deg); 
         -ms-transform: rotate(0deg); 
-            transform: rotate(0deg);
+        transform: rotate(0deg);
     }
     100% { 
-      -webkit-transform: rotate(360deg); 
+        -webkit-transform: rotate(360deg); 
         -ms-transform: rotate(360deg); 
-            transform: rotate(360deg);
+        transform: rotate(360deg);
     }
   }
   
-  .loader-wrapper .loader-section {
+  .loader_wrapper .loader_section {
     position:fixed;
     top:0;
     background:var(--curtain-color);
@@ -99,19 +99,19 @@
     z-index:1000;
   }
   
-  .loader-wrapper .loader-section.section-left {
+  .loader_wrapper .loader_section.section_left {
     left:0
   }
-  .loader-wrapper .loader-section.section-right {
+  .loader_wrapper .loader_section.section_right {
     right:0;
   }
   
   /* Loaded Styles */ 
-  .loaded .loader-wrapper .loader-section.section-left {
+  .loaded .loader_wrapper .loader_section.section_left {
     transform: translateX(-100%);
     transition: all 0.7s 0.3s cubic-bezier(0.645,0.045,0.355,1.000);
   }
-  .loaded .loader-wrapper .loader-section.section-right {
+  .loaded .loader_wrapper .loader_section.section_right {
     transform: translateX(100%);
     transition: all 0.7s 0.3s cubic-bezier(0.645,0.045,0.355,1.000);
   }
@@ -119,7 +119,7 @@
     opacity: 0;
     transition: all .4s ease-out;
   }
-  .loaded .loader-wrapper {
+  .loaded .loader_wrapper {
     visibility: hidden;
     transform:translateY(-100%);
     transition: all .4s 1s ease-out;

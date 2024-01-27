@@ -1,0 +1,70 @@
+.page_header{
+    background: linear-gradient(180deg, rgba(79, 134, 142, 0.2) 0%, rgba(79, 134, 142, 0) 100%);
+}
+.page_title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.page_position_show{
+    display: flex;
+    gap: 3px;
+}
+.page_position_show .home_page{
+    color: var(--common_color);
+}
+.page_header h3{
+    color:  #0F172A;;
+    font-size: var(--title_font_sm);
+    font-weight: var(--title_font_weight);
+    line-height: var(--title_line_height_sm);
+    letter-spacing: 0em;
+}
+.page_title{
+    font-size: var(--para_font_size_xl);
+    font-weight: 600;
+    line-height: 30px;
+    letter-spacing: 0em;
+    padding-top: 24px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) { 
+    .page_header h3{
+        font-size: var(--title_font_xl);
+        font-weight: var(--title_font_weight_xl);
+        line-height: var(--title_line_height_xl);
+        letter-spacing: 0em;
+    }
+    .page_title{
+        font-family: Montserrat;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 30px;
+        letter-spacing: 0em;
+        padding: 62px 0; 
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  
+}
+@media only screen and (min-width: 1400px) {
+
+}

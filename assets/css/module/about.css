@@ -1,0 +1,23 @@
+body{
+    font-family: Montserrat;
+}
+.consultant{
+    background: transparent;
+  }
+  .consultant_name_degree h3{
+    color: #061C3D;
+
+ }
+.consultant_details p{
+    color: #061C3D;
+ }
+ .consultant_bio{
+    color: linear-gradient(0deg, #061C3D, #061C3D);
+ }
+ .consultant_name_degree p{
+    color: var(--common_color);
+}
+.learn_btn {
+    border: 2px solid var(--common_color );
+    color: var(--common_color);
+}

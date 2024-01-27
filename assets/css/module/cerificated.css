@@ -1,0 +1,92 @@
+/* certificate */
+.certificate{ 
+    text-align: center;
+}
+.certificate_wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.certificate .title{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 850px;
+    margin: auto;
+}
+.certificate .title h3{
+    margin-top: 43px;
+    font-family: var(--certificate_title_p_font_weight);
+    font-size: var(--certificate_title_font_size);
+    font-weight: var(--certificate_title_font_weight);
+    line-height: var(--certificate_title_line_height);
+}
+.certificate .title p{
+    font-size: var(--certificate_title_p_font_size);
+    font-family: var(--certificate_title_p_font_family);
+    font-weight: var(--certificate_title_p_font_weight);
+    line-height: var(--certificate_title_p_line_height);
+}  
+.certificate_content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+.certificate_content .certificate_item{
+    max-width: var(--certificate_item_img_width);
+    max-height: var(--certificate_item_img_height);
+    margin: auto;
+}
+.certificate_item img{
+    height: 100%;
+    width: 100%;
+}
+
+  
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .certificate_wrapper{
+        gap: 40px;
+    }
+    .certificate_content{
+        flex-direction: row;
+        gap: 70px;
+    }
+    .certificate .title h3{
+        margin-top: 80px;
+        font-family: var(--certificate_title_big_font_family);
+        font-size: var(--certificate_title_big_font_size);
+        font-weight: var(--certificate_title_big_font_weight);
+        line-height: var(--certificate_title_big_line_height);
+    }
+    .certificate .title p{ 
+        font-size: var(--certificate_title_big_p_font_size);
+        font-family: var(--certificate_title_big_p_font_family);
+        line-height: var(--certificate_title_big_p_line_height);
+    }  
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  
+}
+@media only screen and (min-width: 1400px) {
+
+}
